@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "678619219982",
+    "firebase_url": "https://nippypay.firebaseio.com",
+    "project_id": "nippypay",
+    "storage_bucket": "nippypay.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678619219982:android:d006127dac9ef76713d45f",
+        "android_client_info": {
+          "package_name": "com.illicitintelligence.nippypay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678619219982-f4ge2dm5e4iv7a1eugdle977s7baef2i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.illicitintelligence.nippypay",
+            "certificate_hash": "13dfcbbf3abcc07bb4946ca300975ad6d5366012"
+          }
+        },
+        {
+          "client_id": "678619219982-cnjdch83oim7d48dhvn2pto6sl1vq00p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC52msvdxSJGU2nZ7C3cheGX0U6bf6XZpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678619219982-cnjdch83oim7d48dhvn2pto6sl1vq00p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
