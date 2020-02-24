@@ -21,7 +21,7 @@ class BaseActivity : AppCompatActivity() {
             .beginTransaction()
             .setCustomAnimations(
                 R.anim.slide_out_animation,
-                R.anim.slide_out_animation,
+                R.anim.slide_in_animation,
                 R.anim.slide_in_animation,
                 R.anim.slide_out_animation
             )
