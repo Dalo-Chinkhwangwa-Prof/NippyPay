@@ -23,7 +23,7 @@ class BaseActivity : AppCompatActivity() {
                 R.anim.slide_out_animation,
                 R.anim.slide_in_animation,
                 R.anim.slide_in_animation,
-                R.anim.slide_out_animation
+                R.anim.slide_in_animation
             )
             .add(R.id.home_frame_layout, loginFragment)
             .commit()
