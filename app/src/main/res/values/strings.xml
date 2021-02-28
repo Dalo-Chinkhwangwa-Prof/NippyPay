@@ -20,4 +20,14 @@
     <string name="settings_text">Settings</string>
     <string name="sign_in_error">Error signing in.</string>
     <string name="verification_code_text">verification code</string>
+    <string name="sign_out_text">sign out</string>
+    <string name="signed_out_text">Signed Out</string>
+    <string name="sign_out_success">Successfully signed out.</string>
+    <string name="send_to_text">send to number</string>
+    <string name="tnm_mpamba">TNM Mpamba</string>
+    <string name="airtel_money">Airtel Money</string>
+    <string name="pin_text">PIN</string>
+    <string name="send_amount_mwk">Send amount MWK</string>
+    <string name="make_payment_text">Make Payment</string>
+    <string name="payment_assurance">Making payment of Mwk %d to %s via %s</string>
 </resources>

@@ -2,6 +2,7 @@ package com.illicitintelligence.nippypay.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
 import com.illicitintelligence.nippypay.R
 import com.illicitintelligence.nippypay.view.fragment.LoginFragment
@@ -15,10 +16,10 @@ class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        TODO: check of user has been logged in
+
         FirebaseAuth.getInstance().currentUser?.let {
             openHomeFragment()
-        }?: showLoginFragment()
+        } ?: showLoginFragment()
     }
 
     fun openHomeFragment() {
@@ -48,6 +49,15 @@ class BaseActivity : AppCompatActivity() {
     }
 
     fun logoutUser() {
+        FirebaseAuth.getInstance().signOut()
+        showLoginFragment()
 
+        MaterialAlertDialogBuilder(this)
+            .setTitle(getString(R.string.signed_out_text))
+            .setMessage(getString(R.string.sign_out_success))
+            .setPositiveButton(getString(R.string.okay_text)) { dialog, _ ->
+                dialog.dismiss()
+            }.create()
+            .show()
     }
 }

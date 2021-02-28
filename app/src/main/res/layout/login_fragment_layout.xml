@@ -11,14 +11,14 @@
         android:id="@+id/loading_spinner"
         android:layout_width="96dp"
         android:layout_height="96dp"
+        android:elevation="@dimen/dimen_24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"
-        tools:visibility="visible"
-        android:elevation="@dimen/dimen_24dp"
-        />
+        tools:visibility="visible" />
+
     <FrameLayout
         android:id="@+id/signup_framelayout"
         android:layout_width="match_parent"
@@ -36,12 +36,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="-2dp"
-        android:src="@drawable/mw_trade_bg"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:src="@drawable/mw_trade_bg" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/login_cardview"
         android:layout_width="0dp"
@@ -76,11 +78,13 @@
                 style="@style/PhoneEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
                 android:layout_marginTop="@dimen/dimen_32dp"
                 android:gravity="center"
                 android:hint="@string/phone_number_text"
-                android:layout_marginHorizontal="@dimen/dimen_16dp"
+                android:imeOptions="actionNext"
                 android:padding="@dimen/dimen_16dp"
+                android:singleLine="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/login_title_textview" />
@@ -88,15 +92,17 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/verification_code_edittext"
                 style="@style/AppEditText"
-                android:visibility="gone"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dimen_16dp"
                 android:gravity="center"
-                android:maxLength="6"
                 android:hint="@string/verification_code_text"
+                android:imeOptions="actionDone"
                 android:inputType="number"
+                android:maxLength="6"
                 android:padding="@dimen/dimen_16dp"
+                android:singleLine="true"
+                android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/phone_number_edittext" />
@@ -139,18 +145,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".7"/>
+        app:layout_constraintGuide_percent=".75" />
 
     <TextView
         android:id="@+id/no_account_textview"
         style="@style/AppInfoText"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_24dp"
         android:text="@string/no_account"
-        android:visibility="gone"
         android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_button" />
@@ -170,12 +176,12 @@
 
     <TextView
         style="@style/AppInfoText"
-        android:layout_margin="@dimen/dimen_16dp"
-        android:text="@string/sgd_ltd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:text="@string/sgd_ltd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
