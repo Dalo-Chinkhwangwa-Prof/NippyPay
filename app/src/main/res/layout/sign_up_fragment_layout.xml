@@ -5,7 +5,12 @@
     android:layout_height="match_parent"
     android:background="@color/appColorBg"
     android:orientation="vertical">
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="-2dp"
+        android:src="@drawable/mw_trade_bg"
+        android:scaleType="centerCrop"/>
     <TextView
         android:id="@+id/app_title_textview"
         style="@style/AppTitleText"
@@ -47,66 +52,34 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/phone_extension_a"
-                style="@style/AppTitleText"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/dimen_16dp"
-                android:layout_marginTop="@dimen/dimen_16dp"
-                android:layout_marginEnd="@dimen/dimen_8dp"
-                android:gravity="center"
-                android:text="@string/malawi_extension"
-                android:textSize="@dimen/text_24sp"
-                app:layout_constraintBottom_toBottomOf="@+id/phone_number_edittext"
-                app:layout_constraintEnd_toEndOf="@id/guideline"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/login_title_textview" />
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/phone_number_edittext"
                 style="@style/PhoneEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_16dp"
-                android:layout_marginEnd="@dimen/dimen_16dp"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
                 android:hint="@string/phone_number_text"
                 android:padding="@dimen/dimen_16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/login_title_textview" />
 
-            <TextView
-                android:id="@+id/phone_extension_b"
-                style="@style/AppTitleText"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="@dimen/dimen_16dp"
-                android:layout_marginTop="@dimen/dimen_16dp"
-                android:layout_marginEnd="@dimen/dimen_8dp"
-                android:gravity="center"
-                android:text="@string/malawi_extension"
-                android:textSize="@dimen/text_24sp"
-                app:layout_constraintBottom_toBottomOf="@+id/verify_phone_number_edittext"
-                app:layout_constraintEnd_toEndOf="@id/guideline"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/phone_extension_a" />
-
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/verify_phone_number_edittext"
                 style="@style/PhoneEditText"
                 android:layout_width="0dp"
+                android:layout_marginHorizontal="@dimen/dimen_16dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_16dp"
-                android:layout_marginEnd="@dimen/dimen_16dp"
                 android:hint="@string/verify_phone_number_text"
                 android:padding="@dimen/dimen_16dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/phone_number_edittext" />
 
-            <EditText
-                android:id="@+id/password_edittext"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/verification_code_edittext"
                 style="@style/AppEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -118,7 +91,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/verify_phone_number_edittext" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/verify_password_edittext"
                 style="@style/AppEditText"
                 android:layout_width="0dp"
@@ -129,14 +102,9 @@
                 android:padding="@dimen/dimen_16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/password_edittext" />
+                app:layout_constraintTop_toBottomOf="@id/verification_code_edittext" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent=".25" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

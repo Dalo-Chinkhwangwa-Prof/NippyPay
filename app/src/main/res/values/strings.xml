@@ -8,4 +8,16 @@
     <string name="verify_phone_number_text">verify phone number</string>
     <string name="password_text">password</string>
     <string name="verify_password_text">verify password</string>
+    <string name="verify_text">Verify</string>
+    <string name="sgd_ltd">SGD LTD 2021</string>
+    <string name="send_verification_text">Send Verification</string>
+    <string name="phone_verification_title">Phone Verification</string>
+    <string name="phone_verification_message">Phone verification sent successfully.</string>
+    <string name="okay_text">Okay</string>
+    <string name="unknown_error_message">Unknown Error occurred.</string>
+    <string name="history_text">History</string>
+    <string name="new_payment_text">New Payment</string>
+    <string name="settings_text">Settings</string>
+    <string name="sign_in_error">Error signing in.</string>
+    <string name="verification_code_text">verification code</string>
 </resources>

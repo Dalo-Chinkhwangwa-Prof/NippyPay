@@ -6,7 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".view.activity.BaseActivity"
     android:background="@color/appColorBg">
-
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mw_trade_bg"
+        android:scaleType="centerCrop"
+        android:elevation="-2dp"/>
     <FrameLayout
         android:id="@+id/home_frame_layout"
         android:layout_width="match_parent"

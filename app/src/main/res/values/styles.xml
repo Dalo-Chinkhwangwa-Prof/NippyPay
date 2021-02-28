@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/appColor</item>
         <item name="colorAccent">@color/appColor</item>
+        <item name="colorSurface">@color/appWhite</item>
     </style>
 
     <style name="AppTitleText">
@@ -38,10 +39,18 @@
     </style>
 
     <style name="PhoneEditText" parent="AppEditText">
-        <item name="android:maxLength">9</item>
+        <item name="android:maxLength">10</item>
         <item name="android:inputType">number</item>
         <item name="android:fontFamily">@font/open_sans_condensed_bold</item>
         <item name="android:gravity">start</item>
+    </style>
+
+    <style name="SearchEditText">
+        <item name="android:background">@drawable/curved_edittext</item>
+        <item name="android:drawableRight">@drawable/ic_search</item>
+        <item name="android:layout_margin">@dimen/dimen_16dp</item>
+        <item name="android:padding">@dimen/dimen_16dp</item>
+        <item name="android:elevation">@dimen/dimen_2dp</item>
     </style>
 
 </resources>

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.illicitintelligence.nippypay.R
-import kotlinx.android.synthetic.main.sign_in_fragment_layout.*
+import kotlinx.android.synthetic.main.sign_up_fragment_layout.*
 
 class SignUpFragment : Fragment() {
 
@@ -15,7 +15,7 @@ class SignUpFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.sign_in_fragment_layout, container, false)
+        val view = inflater.inflate(R.layout.sign_up_fragment_layout, container, false)
         return view
     }
 
@@ -29,6 +29,5 @@ class SignUpFragment : Fragment() {
         back_button.setOnClickListener {
             parentFragment?.childFragmentManager?.popBackStack()
         }
-
     }
 }

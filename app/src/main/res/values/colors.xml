@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="appColorBg">#FFF9EF</color>
+    <color name="appColorBg75">#BFFFF9EF</color>
     <color name="appColor">#C48E41</color>
     <color name="appBlack">#000000</color>
     <color name="appWhite">#FFFFFF</color>
