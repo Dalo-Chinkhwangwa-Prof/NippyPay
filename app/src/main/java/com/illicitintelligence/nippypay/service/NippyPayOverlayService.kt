@@ -9,14 +9,15 @@ import android.os.IBinder
 import android.util.Log
 import android.view.Gravity
 import android.view.WindowManager
+import com.illicitintelligence.nippypay.view.custom.NippyOverLay
 
-class NippyPayOverlay: Service() {
-//    private lateinit var paymentLoadView: PaymentLoadView
+class NippyPayOverlayService: Service() {
+    private lateinit var paymentLoadView: NippyOverLay
     private lateinit var wm: WindowManager
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-//        paymentLoadView = PaymentLoadView(this@OverlayService)
-        wm = this@NippyPayOverlay.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        paymentLoadView = NippyOverLay(this@NippyPayOverlayService)
+        wm = this@NippyPayOverlayService.getSystemService(Context.WINDOW_SERVICE) as WindowManager
         val parameters = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             WindowManager.LayoutParams(
                 WindowManager.LayoutParams.MATCH_PARENT,

@@ -7,6 +7,16 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
+import com.illicitintelligence.nippypay.util.Constants.Companion.AIRTEL_MONEY
+import com.illicitintelligence.nippypay.util.Constants.Companion.BALANCE
+import com.illicitintelligence.nippypay.util.Constants.Companion.FAILED
+import com.illicitintelligence.nippypay.util.Constants.Companion.IN_PROGRESS
+import com.illicitintelligence.nippypay.util.Constants.Companion.PAYMENT_OPTION
+import com.illicitintelligence.nippypay.util.Constants.Companion.SHARED_PREF
+import com.illicitintelligence.nippypay.util.Constants.Companion.STATUS
+import com.illicitintelligence.nippypay.util.Constants.Companion.SUCCESS
+import com.illicitintelligence.nippypay.util.Constants.Companion.TNM_MPAMBA
+import com.illicitintelligence.nippypay.util.Constants.Companion.WRONG_PIN
 
 class PaymentAutomationService : AccessibilityService() {
     private lateinit var sharedPreferences: SharedPreferences
@@ -17,11 +27,11 @@ class PaymentAutomationService : AccessibilityService() {
 
     override fun onServiceConnected() {
         super.onServiceConnected()
-        sharedPreferences = getSharedPreferences("Dalo.Pay.Pref", Context.MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences(SHARED_PREF, Context.MODE_PRIVATE)
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
-        sharedPreferences = getSharedPreferences("Dalo.Pay.Pref", Context.MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences(SHARED_PREF, Context.MODE_PRIVATE)
         sendBroadcast(Intent("from.payment.service").also {
             it.putExtra(STATUS, IN_PROGRESS)
         })
